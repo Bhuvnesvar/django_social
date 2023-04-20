@@ -1,0 +1,211 @@
+{
+	"info": {
+		"_postman_id": "d2f7c5cd-be60-43c0-9704-22ed91b9a1b6",
+		"name": "Django-Social App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "127.0.0.1:8000/api/v1/signup/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "varsha@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "varsha",
+							"type": "text"
+						},
+						{
+							"key": "password1",
+							"value": "test@321",
+							"type": "text"
+						},
+						{
+							"key": "password2",
+							"value": "test@321",
+							"type": "text"
+						}
+					]
+				},
+				"url": "127.0.0.1:8000/api/v1/signup/"
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/v1/login/",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "varsha@gmail.com",
+							"type": "default"
+						},
+						{
+							"key": "password",
+							"value": "test@321",
+							"type": "default"
+						}
+					]
+				},
+				"url": "127.0.0.1:8000/api/v1/login/"
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/v1/users/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgyMDY0NjM3LCJpYXQiOjE2ODE5NzgyMzcsImp0aSI6IjViYzI2ZDk2MzMyNzRjYmQ4Y2RiOTIxZWY0ODQ3YTIzIiwidXNlcl9pZCI6Mn0.eoUXiPXG8XiGhqHKU-4CbMzIQ87MQhvMfAYzny01EPE"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": "127.0.0.1:8000/api/v1/users/"
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/v1/user/search_user/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgyMDcxMDg1LCJpYXQiOjE2ODE5ODQ2ODUsImp0aSI6IjhlYTE2NmI0MmY1MDRlZWFiMDlkMzRmNzIxYTYwZGEzIiwidXNlcl9pZCI6N30.g4_aGJDvSEmaTMYIptKjewe0XPOlbkPLuN5etEA9_38"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "query",
+							"value": "v",
+							"type": "default"
+						}
+					]
+				},
+				"url": "127.0.0.1:8000/api/v1/user/search_user/"
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/v1/user/send_friend_request/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgxOTc5NDgxLCJpYXQiOjE2ODE5NzU4ODEsImp0aSI6IjI0Y2ZhNDI2ZmM2NzRlYTliZDIxYTQzMTEwY2M1NjQ5IiwidXNlcl9pZCI6MTl9.uwVGt6dsc7x_iFgogclypFG1yvXjLWT7jlz1Wid5ezs"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "to_user",
+							"value": "18",
+							"type": "default"
+						}
+					]
+				},
+				"url": "127.0.0.1:8000/api/v1/user/send_friend_request/"
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/v1/user/accept_friend_request/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgxOTc4NzMwLCJpYXQiOjE2ODE5NzUxMzAsImp0aSI6IjEwYWZiNjI4YjQ0NjRiM2ZiMzgwYzJmZjg3ZjA3MjIwIiwidXNlcl9pZCI6MTh9.QONnxDRD1AXowLR_eoWIPTCCKjHOtR5oY_QRsRzNt6I"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "to_user",
+							"value": "17",
+							"type": "default"
+						}
+					]
+				},
+				"url": "127.0.0.1:8000/api/v1/user/accept_friend_request/"
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/v1/user/reject_friend_request/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgxOTc5NTE5LCJpYXQiOjE2ODE5NzU5MTksImp0aSI6IjFhNGQzYzEyYjBiNDQwZTFhMWE4OTY5MDVkYmI3ZTk1IiwidXNlcl9pZCI6MTh9.D9dO9EAzpV2xbys409IYUV1n_T40nx213diZba_nurA"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "from_user",
+							"value": "19",
+							"type": "default"
+						}
+					]
+				},
+				"url": "127.0.0.1:8000/api/v1/user/reject_friend_request/"
+			},
+			"response": []
+		},
+		{
+			"name": "127.0.0.1:8000/api/v1/user/profile/",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgyMDcxMDg1LCJpYXQiOjE2ODE5ODQ2ODUsImp0aSI6IjhlYTE2NmI0MmY1MDRlZWFiMDlkMzRmNzIxYTYwZGEzIiwidXNlcl9pZCI6N30.g4_aGJDvSEmaTMYIptKjewe0XPOlbkPLuN5etEA9_38"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": "127.0.0.1:8000/api/v1/user/profile/"
+			},
+			"response": []
+		}
+	]
+}
