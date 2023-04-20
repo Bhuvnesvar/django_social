@@ -41,7 +41,7 @@ a) API to list friends(list of users who have accepted friend request)
 
 b) List pending friend requests(received friend request)
 
-I created Profile Api , when user sent request then in this api he will find all the friends_list, pending_list, sent_friend_reuuest_list.
+I created Profile Api , when user sent request then in this api he will find all the friends_list, pending_list, sent_friend_request_list.
 
 
 
